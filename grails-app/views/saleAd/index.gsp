@@ -26,6 +26,8 @@
                     <th id="details-label" class="property-label">Détails</th>
                     <th id="modifier-label" class="property-label">Modifier</th>
                     <th id="supprimer-label" class="property-label">Supprimer</th>
+                    <th id="illustration-label" class="property-label">Illustration</th>
+
                 </tr>
                 </thead>
                 <tbody>
@@ -36,6 +38,7 @@
                         <td><g:link resource="${bean}" action="show">Détail</g:link></td>
                         <td><g:link resource="${bean}" action="edit">Modifier</g:link></td>
                         <td><g:link resource="${bean}" action="delete">Supprimer</g:link></td>
+                        <td><g:link resource="${bean}" action="show">Illustration</g:link></td>
                     </tr>
                 </g:each>
                 </tbody>

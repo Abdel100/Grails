@@ -31,6 +31,40 @@ html.no-cssgradients {
 html * {
     margin: 0;
 }
+/* Style the navigation bar */
+.navbar {
+    width: 100%;
+    background-color: #555;
+    overflow: auto;
+}
+
+/* Navbar links */
+.navbar a {
+    float: left;
+    text-align: center;
+    padding: 12px;
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+/* Navbar links on mouse-over */
+/*.navbar a:hover {*/
+/*    background-color: #000;*/
+/*}*/
+
+/* Current/active navbar link */
+.active {
+    background-color: #04AA6D;
+}
+
+/* Add responsiveness - will automatically display the navbar vertically instead of horizontally on screens less than 500 pixels */
+@media screen and (max-width: 500px) {
+    .navbar a {
+        float: none;
+        display: block;
+    }
+}
 
 body {
     background-color: #F5F5F5;
@@ -111,7 +145,15 @@ img {
 /* NAVIGATION MENU */
 
 .nav {
-    zoom: 1;
+    height: 100%;
+    width: 6cm;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 16px;
 }
 
 .nav ul {
@@ -129,24 +171,30 @@ img {
 }
 
 .nav a {
-    color: #666666;
-    display: block;
-    padding: 0.25em 0.7em;
+    padding: 6px 8px 6px 16px;
     text-decoration: none;
-    -moz-border-radius: 0.3em;
-    -webkit-border-radius: 0.3em;
-    border-radius: 0.3em;
+    font-size: 20px;
+    color: #818181;
+    display: block;
 }
+
 
 .nav a:active, .nav a:visited {
-    color: #666666;
+    color: #4298b8;
 }
 
-.nav a:focus, .nav a:hover {
-    background-color: #999999;
-    color: #ffffff;
-    outline: none;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
+.nav a:hover {
+    color: #8a6d3b;
+
+}
+.main {
+    margin-left: 6cm; /* Same as the width of the sidenav */
+    padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+    .nav {padding-top: 15px;}
+    .nav a {font-size: 18px;}
 }
 
 .no-borderradius .nav a:focus, .no-borderradius .nav a:hover {
