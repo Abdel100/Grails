@@ -71,11 +71,13 @@
         <nav class="col-sm-3 col-md-2 d-none d-sm-block bg-light sidebar">
             <ul class="nav navbar-nav">
                 <li>
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                       aria-expanded="false">
-                        Utilisateurs
-                        <span class="caret"></span>
-                    </a>
+                    <sec:ifAnyGranted roles="ROLE_ADMIN">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                           aria-expanded="false">
+                            Utilisateurs
+                            <span class="caret"></span>
+                        </a>
+                    </sec:ifAnyGranted>
                     <ul class="dropdown-menu">
                         <li><a href="#"></a><g:link controller="user">Visualiser</g:link></li>
                         <li><a href="#"></a><g:link controller="user" class="create" action="create">Ajouter</g:link>
@@ -98,9 +100,11 @@
                 </li>
                 <br>
                 <li>
-                    <a href="${createLink(uri: '/saleAd/ref/index?')}">
-                        Mes annonces
-                    </a>
+                    <sec:ifLoggedIn>
+                        <a href="/saleAd/index2/${sec.username()}">
+                            Mes annonces
+                        </a>
+                    </sec:ifLoggedIn>
                 </li>
             </ul>
         </nav>

@@ -16,9 +16,23 @@ class BootStrap {
         UserRole.create(modUser, modRole, true)
         UserRole.create(clientUser, clientRole, true)
 
+        def adInstance1 = new SaleAd(
+                title: "Title admin",
+                description: "Description admin",
+                price: 200,
+                status: Boolean.TRUE,
+                ref: "Admin1"
+        )
+        adInstance1.addToIllustrations(new Illustration(filename: "grails.svg"))
+        adminUser.addToAds(adInstance1)
+        adminUser.save()
+
+
         ["Alice", "Bob", "Charly", "Denis", "Etienne"].each {
             String usernameVar ->
                 def userInstance = new User(username: usernameVar, password: 'password').save()
+                UserRole.create(userInstance, clientRole, true)
+
                 (1..5).each {
                     Integer adIdx ->
                         def adInstance = new SaleAd(

@@ -9,6 +9,8 @@ class UrlMappings {
             }
         }
 
+        "/saleAd/index2/$name"(controller: "saleAd", action: "index2")
+
         "/"(view:"/index")
         "500"(view:'/error')
         "404"(view:'/notFound')

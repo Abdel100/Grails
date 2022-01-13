@@ -8,6 +8,7 @@ import static org.springframework.http.HttpStatus.*
 class UserController {
 
     UserService userService
+    SaleAdService saleAdService
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
@@ -77,6 +78,10 @@ class UserController {
             notFound()
             return
         }
+
+        def userInstance = User.get(id)
+        def list = userInstance.ads
+        list.forEach({saleAdService.delete(it.id)})
 
         userService.delete(id)
 
