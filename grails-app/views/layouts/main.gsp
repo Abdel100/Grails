@@ -17,12 +17,7 @@
 <body>
 
 <header>
-    %{--    <div class="navbar">--}%
-    %{--        <a class="active" href="#"><i class="fa fa-fw fa-home"></i> Home</a>--}%
-    %{--        <a href="#"><i class="fa fa-fw fa-search"></i> Search</a>--}%
-    %{--        <a href="#"><i class="fa fa-fw fa-envelope"></i> Contact</a>--}%
-    %{--        <a href="#"><i class="fa fa-fw fa-user"></i> Login</a>--}%
-    %{--    </div>--}%
+
 
     <div class="navbar" role="navigation">
         <div class="container">
@@ -54,11 +49,7 @@
 
 
             </div>
-%{--            <div class="navbar-collapse collapse" aria-expanded="false" style="height: 0.8px;">--}%
-%{--                <ul class="nav navbar-nav navbar-right">--}%
-%{--                    <g:pageProperty name="page.nav"/>--}%
-%{--                </ul>--}%
-%{--            </div>--}%
+
 
         </div>
     </div>
@@ -108,7 +99,6 @@
                 </li>
             </ul>
         </nav>
-%{--        <UIHelper:leftNavigation/>--}%
 
         <main role="main" class="col-sm-9 ml-sm-auto col-md-10 pt-3">
             <g:layoutBody/>

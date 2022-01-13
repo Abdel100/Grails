@@ -37,8 +37,7 @@
                         ${saleAd.title}
                     </g:link>
                 </td>
-                %{--                    <td>${saleAd.description}</td>--}%
-                %{--                    <td>${saleAd.ref}</td>--}%
+
                 <td style="text-align:center !important;">${saleAd.price}</td>
 
                 <td style="text-align: center !important;">
@@ -47,10 +46,7 @@
                     </g:each>
                 </td>
 
-                <td ><g:link class="btn  btn-warning" resource="${saleAd}" action="edit">Modifier</g:link></td>
-                %{--                    <td><g:link resource="${saleAd}" action="delete">Supprimer</g:link></td>--}%
-                %{--                    <g:link class="btn btn-warning" action="edit"--}%
-                %{--                            resource="${this.saleAd}"><g:message code="default.button.edit.label" default="Edit" /></g:link>--}%
+                <td ><g:link class="btn  btn-primary" resource="${saleAd}" action="edit">Modifier</g:link></td>
 
                 <td>
                     <g:form resource="${saleAd}" method="DELETE">
@@ -59,11 +55,6 @@
                                onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');"/>
                     </g:form>
                 </td>
-                %{--                    <td style="text-align:center !important;">--}%
-                %{--                        <g:link controller="user" action="show" id="${saleAd.author.id}">--}%
-                %{--                            ${saleAd.author.username}--}%
-                %{--                        </g:link>--}%
-                %{--                    </td>--}%
             </tr>
         </g:each>
         </tbody>

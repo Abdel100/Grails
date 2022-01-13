@@ -40,14 +40,7 @@
                         ${user.username}
                     </g:link>
                 </td>
-
-                %{--                        <td style="text-align: center !important;">--}%
-                %{--                            <g:each in="${user.illustrations}" var="illustration">--}%
-                %{--                                <img src="${grailsApplication.config.assets.url+illustration.filename}" height="100px"/>--}%
-                %{--                            </g:each>--}%
-                %{--                        </td>--}%
-
-                <td style="text-align:center !important;"><g:link class="btn  btn-warning" resource="${user}" action="edit">Modifier</g:link></td>
+                <td style="text-align:center !important;"><g:link class="btn  btn-primary" resource="${user}" action="edit">Modifier</g:link></td>
                 <td style="text-align:center !important;">
                     <g:form resource="${user}" method="DELETE">
                         <input class="btn  btn-danger" type="submit"

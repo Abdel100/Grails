@@ -29,7 +29,7 @@
     <div class="container">
 
         <div class="row">
-            <div class="col-md-4 order-md-2 mb-4">
+            <div >
 
             </div>
 
@@ -76,19 +76,17 @@
                         <ol style="padding-left:1rem !important;">
                             <g:each var="illustration" in="${saleAd.illustrations}">
                                 <li>
-                                    <img src="${grailsApplication.config.assets.path}${illustration.filename}"
-                                         height="200px"/>
+                                    <img src="${grailsApplication.config.assets.url+illustration.filename}" height="50px"/>
+
                                     <br>
                                     <br>
 
-                                        <g:link resource="${saleAd}" controller="illustration" method="DELETE" action="delete" name="delete">
-                                            <input class="btn  btn-danger" type="submit"
-                                                   onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');"/>
 
-                                        </g:link>
-                                        %{--                                    <g:link class="btn  btn-danger" controller="illustration" action="delete"--}%
-%{--                                            id="${illustration.id}">Supprimer--}%
-%{--                                    </g:link>--}%
+
+
+                                    <g:link class="btn  btn-danger" controller="illustration" action="delete" id="${illustration.id}">
+                                        Supprimer
+                                    </g:link>
                                 </li>
                                 <br>
                             </g:each>
@@ -99,22 +97,17 @@
                             <br>
                         </div>
                         <br>
-                        <input type="button" class=" btn  btn-warning"
+                        <input type="button" class=" btn  btn-success"
                                id="more_fields" onclick="add_image_field();" value="Ajouter"/>
 
                     </div>
                     <br>
 
-                %{--                    <div class="form-label-group">--}%
-                %{--                        <label>Sélectionnez un Auteur</label>--}%
-                %{--                        <g:select class="form-control" from="${tp.mbds.com.User.list()}"--}%
-                %{--                                  name="user" optionKey="id" optionValue="username"--}%
-                %{--                                  value="${this.saleAd.author.id}"/>--}%
-                %{--                    </div>--}%
+
                     <br>
 
                     <div class="form-label-group">
-                        <input class="btn btn-primary btn-warning btn-lg btn-block" type="submit"
+                        <input class="btn btn-primary btn-primary btn-lg btn-block " type="submit"
                                value="${message(code: 'default.button.update.label', default: 'Update')}"/>
 
                     </div>

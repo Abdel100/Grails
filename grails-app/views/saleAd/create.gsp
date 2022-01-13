@@ -54,9 +54,9 @@
 
                     <div class="form-label-group">
                         <label for="ref">Référence</label>
-                        <textarea type="text" name="ref" value=""  id="ref"
+                        <input type="text" name="ref" value=""  id="ref"
                                   class="form-control"
-                                  placeholder="Entrez une référence"></textarea>
+                                  placeholder="Entrez une référence">
                     </div>
                     <br>
 
@@ -76,8 +76,8 @@
                         <div class="content" id="image_fields">
                             <br>
                         </div>
-                        <br>
-                        <input type="button" class=" btn  btn-warning"
+
+                        <input type="button" class="btn btn-success"
                                id="more_fields" onclick="add_image_field();" value="Ajouter"/>
                     </div>
                     <br>
@@ -90,8 +90,7 @@
                     <br>
 
                     <div class="form-label-group">
-                        <g:submitButton class="btn btn-primary  btn-block" name="create"
-                                        value="${message(code: 'default.button.create.label', default: 'Create')}"/>
+                        <g:submitButton class="btn btn-primary btn-lg" name="Enregistrer"/>
                     </div>
 
                 </g:form>
